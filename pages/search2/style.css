@@ -25,6 +25,7 @@ html,body {
     font-size: 16px;
     border: 1px solid #dfe1e5;
     padding-inline: 16px;
+    padding-inline-start: 32px;
 }
 .google>.iText:focus, .google>.iText:hover{
     border: none;
@@ -62,10 +63,11 @@ html,body {
 }
 .footerButtons{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 0 15px;
     align-items: center;
-    height: 46px;    
+    height: 46px;
+    background-color: #4545;
 }
 .footerButtons>.left>a, .footerButtons>.right>a{
     padding: 15px;
@@ -78,7 +80,48 @@ html,body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #70757a;
-}
-a{
     text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.avatar>a>img{
+    height: 32px;
+}
+.googleApps>a>img{
+    height: 18px;
+    color: #5f6368;
+    fill: currentColor;
+}
+.header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 6px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.headerIcons{   
+    width: 96;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.avatar{
+    order: 1;
+}
+.avatar, .googleApps{
+    padding: 8px;
+}
+.headerLinks>a{
+    color: #000000de;
+    font-size: 13px;
+}
+.headerLinks{
+    padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

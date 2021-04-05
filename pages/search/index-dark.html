@@ -6,14 +6,14 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Google UiClone</title>
     <link rel='shortcut icon' href='../../src/favicon.svg' type='image/x-icon'>
-    <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='style-dark.css'>
 </head>
 <body>
     <div class=header>
-        <a href="index-dark.html" class="darkModeButton">
-            <input type="button" value="Dark">
+        <a href="index.html" class="darkModeButton">
+            <input type="button" value="Light">
         </a>
-        <div class="headerLinks">
+        <div class=headerLinks>
             <a href="">Gmail</a>
             <a href=""style="padding-left: 15px;">Imagens</a>
         </div>
@@ -32,11 +32,9 @@
     </div>
     <div class="container">
         <div class="google" >
-            <img src="../../src/google-logo.svg" alt="Google Logo" class="googleLogo">
-            <div class="searchBar">
-                <input type="text" height="44px" width="584px" class="iText" placeholder="Pesquise no Google ou digite um URL">
-            </div>
-            <img src="../../src/search.svg" alt="search" class="searchIcon" hidden>
+            <img id="googleLogo" src="../../src/google-logo-dark.svg" alt="Google Logo">
+            
+            <input type="text" height="44px" width="584px" class="iText" placeholder="Pesquise no Google ou digite um URL">
         </div>
         <div class="botoes">
             <center>

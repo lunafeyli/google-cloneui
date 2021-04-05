@@ -3,6 +3,9 @@ html,body {
     height: 100%;
     overflow: hidden;
 }
+body{
+    background-color: #181A1B;
+}
 .container{
     height: 85%;
     display: flex;
@@ -16,37 +19,24 @@ html,body {
     justify-content: center;
     align-items: center;
 }
-.googleLogo{
-    height: 92px;
-    max-height: calc(100vw - 20px)!important;
-}
-.google>.searchBar>.iText, .google>.searchBar>.iText:focus, .google>.searchBar>.iText:hover{
+.google>.iText, .google>.iText:focus, .google>.iText:hover{
     box-sizing: border-box;
     height: 44px;
     width: 584px;
-    max-width: calc(100vw - 20px)!important;
     margin: 25px;
     border-radius: 50px;
     font-size: 16px;
-    border: 1px solid #dfe1e5;
+    border: 1px solid #151718;
     padding-inline: 16px;
     padding-inline-start: 32px;
+    background-color: #151718;
+    color: #fff;
 }
-.google>.searchBar>.iText:focus, .google>.searchBar>.iText:hover{
+.google>.iText:focus, .google>.iText:hover{
     border: none;
-    box-shadow: 0px 0px 5px 1px #20212447;
+    box-shadow: 0px 0px 5px 1px #24272947;
     outline: none;
 }
-/*.searchBar{
-    position: relative;
-    height: 44px;
-    width: 584px;
-}
-.searchIcon{
-    position: absolute;
-    height: 14px;
-    top: 0;
-}*/
 .botoes{
     display: flex;
     flex: content;
@@ -57,8 +47,8 @@ html,body {
 .botoes>center>input, .botoes>center>input:hover{
     height: 36px;
     width: 138px;
-    background-color: #f8f9fa;
-    color: #3c4043;
+    background-color: #151718;
+    color: #fff;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
@@ -66,13 +56,11 @@ html,body {
     margin-right: 5px;
 }
 .botoes>center>input:hover{
-    box-shadow: 0px 1px 2px 1px #8b8c9147;
+    box-shadow: 0px 1px 2px 1px #24272947;
 }
 .footer{    
-    background-color: #f2f2f2;
+    background-color: #1F2223;
     height: 94px;
-    /*max-height: calc(100vw - 313px)!important;*/
-    min-height: 47px;
     width: 100%;
     position: fixed;
     left: 0;
@@ -88,19 +76,15 @@ html,body {
 }
 .footerButtons>.left>a, .footerButtons>.right>a{
     padding: 15px;
-    font-size: clamp(8px, 14px, 14px);
-    /*max-height: calc(100vw - 100px)!important;*/
-}
-.footerButtons>.left{
 }
 .footerLocal{
-    border-bottom: 1px solid #dadce0;
+    border-bottom: 1px solid #3A3E41;
     padding: 15px 30px;
 }
 .footerLocal, a{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: #70757a;
+    color: #e8e6e38a;
     text-decoration: none;
 }
 a:hover{
@@ -137,7 +121,7 @@ a:hover{
     padding: 8px;
 }
 .headerLinks>a{
-    color: #000000de;
+    color: #ffffffde;
     font-size: 13px;
 }
 .headerLinks{
@@ -150,7 +134,7 @@ a:hover{
     position: fixed;
     left: 10px;
     top: 21.5px;
-    background-color: #f8f9fa;
+    background-color: #151718;
     border-color: #ffffff00;
-    color: #3c4043;
+    color: #fff;
 }
