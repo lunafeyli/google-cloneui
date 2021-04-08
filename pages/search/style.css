@@ -1,7 +1,50 @@
+:root{
+    --bg-color: #fff;
+    --sbar-text: #1f1f1f;
+    --sbar-color: #fff;
+    --sbar-border: #dfe1e5;
+    --sbar-shadow: #20212447;
+    --btn-color: #f8f9fa;
+    --btn-text: #3c4043;
+    --btn-shadow: #8b8c9147;
+    --footer-color: #f2f2f2;
+    --footer-separator: #dadce0;
+    --footer-text: #70757a;
+    --header-text: #000000de;
+
+}
 html,body {
     margin: 0;
     height: 100%;
     overflow: hidden;
+}
+#darkModeSwitcher:checked + .main{
+    --bg-color: #181A1B;
+    --sbar-text: #fff;
+    --sbar-color: #151718;
+    --sbar-border: #151718;
+    --sbar-shadow: #24272947;
+    --btn-color: #151718;
+    --btn-text: #fff;
+    --btn-shadow: #24272947;
+    --footer-color: #1F2223;
+    --footer-separator: #3A3E41;
+    --footer-text: #e8e6e38a;
+    --header-text: #ffffffde;
+}
+#darkModeSwitcher:checked + .main .container .google .googleLogo{
+    filter: brightness(1000000%);
+}
+#darkModeSwitcher:checked + .main .header .headerIcons .googleApps .googleApps-logo{
+    filter: invert(100%);
+}
+/* * {
+    transition: 0.10s ease-in-out;
+    transition-property: all;
+} */
+.main{
+    height: 100%;
+    background-color: var(--bg-color);
 }
 .container{
     height: 85%;
@@ -9,6 +52,46 @@ html,body {
     flex-direction: column;
     justify-content: center;
 }
+#darkModeSwitcher{
+    cursor: pointer;
+    top: -7px;
+    position: absolute;
+    display: none;
+}
+label{
+    left: 10px;
+    top: 10px;
+    position: fixed;
+}
+.switcher-bg{
+    position: absolute;
+    background-color: #efefef;
+    height: 14px;
+    width: 30px;
+    border-radius: 8px;
+    z-index: -1;
+    border: 2px solid #dfdfdf;
+}
+.switcher-dot{
+    position: relative;
+    background-color: #212121;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: 0.25s ease-in-out;
+    transition-property: all;
+}
+#darkModeSwitcher:checked + .main .header label .switcher-dot{
+    transform: translateX(16px);
+    background-color: #efefef;
+}
+#darkModeSwitcher:checked + .main .header label .switcher-bg{
+    background-color: #212121;
+    border: 2px solid #3d3d3d;
+}
+
 .google{
     display: flex;
     flex: content;
@@ -21,6 +104,7 @@ html,body {
     max-height: calc(100vw - 20px)!important;
 }
 .google>.searchBar>.iText, .google>.searchBar>.iText:focus, .google>.searchBar>.iText:hover{
+    background-color: var(--sbar-color);
     box-sizing: border-box;
     height: 44px;
     width: 584px;
@@ -28,13 +112,14 @@ html,body {
     margin: 25px;
     border-radius: 50px;
     font-size: 16px;
-    border: 1px solid #dfe1e5;
+    border: 1px solid var(--sbar-border);
     padding-inline: 16px;
     padding-inline-start: 32px;
+    color: var(--sbar-text);
 }
 .google>.searchBar>.iText:focus, .google>.searchBar>.iText:hover{
     border: none;
-    box-shadow: 0px 0px 5px 1px #20212447;
+    box-shadow: 0px 0px 5px 1px var(--sbar-shadow);
     outline: none;
 }
 /*.searchBar{
@@ -57,8 +142,8 @@ html,body {
 .botoes>center>input, .botoes>center>input:hover{
     height: 36px;
     width: 138px;
-    background-color: #f8f9fa;
-    color: #3c4043;
+    background-color: var(--btn-color);
+    color: var(--btn-text);
     border: none;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
@@ -66,10 +151,10 @@ html,body {
     margin-right: 5px;
 }
 .botoes>center>input:hover{
-    box-shadow: 0px 1px 2px 1px #8b8c9147;
+    box-shadow: 0px 1px 2px 1px var(--btn-shadow);
 }
 .footer{    
-    background-color: #f2f2f2;
+    background-color: var(--footer-color);
     height: 94px;
     /*max-height: calc(100vw - 313px)!important;*/
     min-height: 47px;
@@ -91,16 +176,14 @@ html,body {
     font-size: clamp(8px, 14px, 14px);
     /*max-height: calc(100vw - 100px)!important;*/
 }
-.footerButtons>.left{
-}
 .footerLocal{
-    border-bottom: 1px solid #dadce0;
+    border-bottom: 1px solid var(--footer-separator);
     padding: 15px 30px;
 }
 .footerLocal, a{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: #70757a;
+    color: var(--footer-text);
     text-decoration: none;
 }
 a:hover{
@@ -137,7 +220,7 @@ a:hover{
     padding: 8px;
 }
 .headerLinks>a{
-    color: #000000de;
+    color: var(--header-text);
     font-size: 13px;
 }
 .headerLinks{
@@ -153,4 +236,28 @@ a:hover{
     background-color: #f8f9fa;
     border-color: #ffffff00;
     color: #3c4043;
+}
+@media (max-width: 804px){
+
+.footerButtons .left a, .footerButtons .right a{
+    font-size: 12px;
+}
+
+}
+@media (max-width: 425px){
+    
+    .footerButtons .left{
+        display: none;
+    }
+    .footerButtons{
+        justify-content: center;
+    }
+    
+}
+@media (max-width: 322px){
+
+.footerButtons .right a{
+    font-size: 12px;
+}
+
 }

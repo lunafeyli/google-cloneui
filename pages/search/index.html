@@ -9,55 +9,62 @@
     <link rel='stylesheet' href='style.css'>
 </head>
 <body>
-    <div class=header>
-        <a href="index-dark.html" class="darkModeButton">
-            <input type="button" value="Dark">
-        </a>
-        <div class="headerLinks">
-            <a href="">Gmail</a>
-            <a href=""style="padding-left: 15px;">Imagens</a>
-        </div>
-        <div class="headerIcons">
-            <div class="avatar">
-                <a href=#>
-                    <img src="../../src/avatar.png" alt="Avatar" style="border-radius: 50%;">
-                </a>
+    <input type="checkbox" value="darkModeSwitcher" id="darkModeSwitcher">
+    <div class="main">
+        <div class="header">
+            <a href="index-dark.html" class="darkModeButton" hidden>
+                <input type="button" value="Dark">
+            </a>
+            <label for="darkModeSwitcher">
+                <div class="switcher-bg"></div>
+                <div class="switcher-dot"></div>
+            </label>
+            <div class="headerLinks">
+                <a href="">Gmail</a>
+                <a href=""style="padding-left: 15px;">Imagens</a>
             </div>
-            <div class=googleApps>
-                <a href=#>
-                    <img src="../../src/google-app.svg " alt="Google Apps">
-                </a>
+            <div class="headerIcons">
+                <div class="avatar">
+                    <a href=#>
+                        <img src="../../src/avatar.png" alt="Avatar" style="border-radius: 50%;">
+                    </a>
+                </div>
+                <div class="googleApps">
+                    <a href=#>
+                        <img src="../../src/google-app.svg " alt="Google Apps" class="googleApps-logo">
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="google" >
-            <img src="../../src/google-logo.svg" alt="Google Logo" class="googleLogo">
-            <div class="searchBar">
-                <input type="text" height="44px" width="584px" class="iText" placeholder="Pesquise no Google ou digite um URL">
+        <div class="container">
+            <div class="google" >
+                <img src="../../src/google-logo.svg" alt="Google Logo" class="googleLogo">
+                <div class="searchBar">
+                    <input type="text" height="44px" width="584px" class="iText" placeholder="Pesquise no Google ou digite um URL">
+                </div>
+                <img src="../../src/search.svg" alt="search" class="searchIcon" hidden>
             </div>
-            <img src="../../src/search.svg" alt="search" class="searchIcon" hidden>
-        </div>
-        <div class="botoes">
-            <center>
-                <input type="button" value="Pesquisa Google">
-                <input type="button" value="Estou com sorte">
-            </center>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="footerLocal">Brasil</div>
-        <div class="footerButtons">
-            <div class="left">
-                <a href="">Sobre</a>
-                <a href="">Publicidade</a>
-                <a href="">Negócios</a>
-                <a href="">Como funciona a Pesquisa</a>
+            <div class="botoes">
+                <center>
+                    <input type="button" value="Pesquisa Google">
+                    <input type="button" value="Estou com sorte">
+                </center>
             </div>
-            <div class="right">
-                <a href="">Privacidade</a>
-                <a href="">Termos</a>
-                <a href="">Configurações</a>
+        </div>
+        <div class="footer">
+            <div class="footerLocal">Brasil</div>
+            <div class="footerButtons">
+                <div class="left">
+                    <a href="">Sobre</a>
+                    <a href="">Publicidade</a>
+                    <a href="">Negócios</a>
+                    <a href="">Como funciona a Pesquisa</a>
+                </div>
+                <div class="right">
+                    <a href="">Privacidade</a>
+                    <a href="">Termos</a>
+                    <a href="">Configurações</a>
+                </div>
             </div>
         </div>
     </div>
