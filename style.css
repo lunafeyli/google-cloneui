@@ -1,4 +1,4 @@
-:root{
+:root {
     --bg-color: #fff;
     --sbar-text: #1f1f1f;
     --sbar-color: #fff;
@@ -11,15 +11,15 @@
     --footer-separator: #dadce0;
     --footer-text: #70757a;
     --header-text: #000000de;
-
 }
-html,body {
+html,
+body {
     margin: 0;
     height: 100%;
     overflow: hidden;
 }
-#darkModeSwitcher:checked + .main{
-    --bg-color: #181A1B;
+#switcher__dark:checked + .main {
+    --bg-color: #181a1b;
     --sbar-text: #fff;
     --sbar-color: #151718;
     --sbar-border: #151718;
@@ -27,43 +27,48 @@ html,body {
     --btn-color: #151718;
     --btn-text: #fff;
     --btn-shadow: #24272947;
-    --footer-color: #1F2223;
-    --footer-separator: #3A3E41;
+    --footer-color: #1f2223;
+    --footer-separator: #3a3e41;
     --footer-text: #e8e6e38a;
     --header-text: #ffffffde;
 }
-#darkModeSwitcher:checked + .main .container .google .googleLogo{
+#switcher__dark:checked + .main .container .container__google .google__logo {
     filter: brightness(1000000%);
 }
-#darkModeSwitcher:checked + .main .header .headerIcons .googleApps .googleApps-logo{
+#switcher__dark:checked
+    + .main
+    .header
+    .header__icons
+    .header__g-apps
+    .g-app__logo {
     filter: invert(100%);
 }
 /* * {
     transition: 0.10s ease-in-out;
     transition-property: all;
 } */
-.main{
+.main {
     height: 100%;
     background-color: var(--bg-color);
 }
-.container{
+.container {
     height: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-#darkModeSwitcher{
+#switcher__dark {
     cursor: pointer;
     top: -7px;
     position: absolute;
     display: none;
 }
-label{
+.header__dark-switcher {
     left: 10px;
     top: 10px;
     position: fixed;
 }
-.switcher-bg{
+.switcher-bg {
     position: absolute;
     background-color: #efefef;
     height: 14px;
@@ -72,7 +77,7 @@ label{
     z-index: -1;
     border: 2px solid #dfdfdf;
 }
-.switcher-dot{
+.switcher-dot {
     position: relative;
     background-color: #212121;
     height: 12px;
@@ -83,32 +88,34 @@ label{
     transition: 0.25s ease-in-out;
     transition-property: all;
 }
-#darkModeSwitcher:checked + .main .header label .switcher-dot{
+#switcher__dark:checked + .main .header .header__dark-switcher .switcher-dot {
     transform: translateX(16px);
     background-color: #efefef;
 }
-#darkModeSwitcher:checked + .main .header label .switcher-bg{
+#switcher__dark:checked + .main .header .header__dark-switcher .switcher-bg {
     background-color: #212121;
     border: 2px solid #3d3d3d;
 }
 
-.google{
+.container__google {
     display: flex;
     flex: content;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.googleLogo{
+.google__logo {
     height: 92px;
-    max-height: calc(100vw - 20px)!important;
+    max-height: calc(100vw - 20px) !important;
 }
-.google>.searchBar>.iText, .google>.searchBar>.iText:focus, .google>.searchBar>.iText:hover{
+.sbar__input,
+.sbar__input:focus,
+.sbar__input:hover {
     background-color: var(--sbar-color);
     box-sizing: border-box;
     height: 44px;
     width: 584px;
-    max-width: calc(100vw - 20px)!important;
+    max-width: calc(100vw - 20px) !important;
     margin: 25px;
     border-radius: 50px;
     font-size: 16px;
@@ -117,12 +124,13 @@ label{
     padding-inline-start: 32px;
     color: var(--sbar-text);
 }
-.google>.searchBar>.iText:focus, .google>.searchBar>.iText:hover{
+.sbar__input:focus,
+.sbar__input:hover {
     border: none;
     box-shadow: 0px 0px 5px 1px var(--sbar-shadow);
     outline: none;
 }
-/*.searchBar{
+/*.google__sbar{
     position: relative;
     height: 44px;
     width: 584px;
@@ -132,14 +140,15 @@ label{
     height: 14px;
     top: 0;
 }*/
-.botoes{
+.container__buttons {
     display: flex;
     flex: content;
     flex-direction: row;
     padding-top: 5px;
     justify-content: center;
 }
-.botoes>center>input, .botoes>center>input:hover{
+.container__buttons center input,
+.container__buttons center input:hover {
     height: 36px;
     width: 138px;
     background-color: var(--btn-color);
@@ -150,10 +159,13 @@ label{
     margin-left: 5px;
     margin-right: 5px;
 }
-.botoes>center>input:hover{
+.container__buttons center input:hover {
     box-shadow: 0px 1px 2px 1px var(--btn-shadow);
 }
-.footer{    
+
+/* Footer */
+
+.footer {
     background-color: var(--footer-color);
     height: 94px;
     /*max-height: calc(100vw - 313px)!important;*/
@@ -163,7 +175,7 @@ label{
     left: 0;
     bottom: 0;
 }
-.footerButtons{
+.footer__buttons {
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
@@ -171,33 +183,38 @@ label{
     height: 46px;
     /*background-color: #4545;*/
 }
-.footerButtons>.left>a, .footerButtons>.right>a{
+.footer__buttons .left a,
+.footer__buttons .right a {
     padding: 15px;
     font-size: clamp(8px, 14px, 14px);
     /*max-height: calc(100vw - 100px)!important;*/
 }
-.footerLocal{
+.footer__local {
     border-bottom: 1px solid var(--footer-separator);
     padding: 15px 30px;
 }
-.footerLocal, a{
+.footer__local,
+a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: var(--footer-text);
     text-decoration: none;
 }
-a:hover{
+a:hover {
     text-decoration: underline;
 }
-.avatar>a>img{
+.header__avatar a img {
     height: 32px;
 }
-.googleApps>a>img{
+.header__g-apps a img {
     height: 18px;
     color: #5f6368;
     fill: currentColor;
 }
-.header{
+
+/* Header */
+
+.header {
     position: fixed;
     right: 0;
     top: 0;
@@ -205,59 +222,54 @@ a:hover{
     display: flex;
     flex-direction: row;
     align-items: center;
-    
 }
-.headerIcons{   
+.header__icons {
     width: 96;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.avatar{
+.header__avatar {
     order: 1;
 }
-.avatar, .googleApps{
+.header__avatar,
+.header__g-apps {
     padding: 8px;
 }
-.headerLinks>a{
+.header__links a {
     color: var(--header-text);
     font-size: 13px;
 }
-.headerLinks{
+.header__links {
     padding-right: 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.darkModeButton>input{
+/* .darkmodeButton input{
     position: fixed;
     left: 10px;
     top: 21.5px;
     background-color: #f8f9fa;
     border-color: #ffffff00;
     color: #3c4043;
+} */
+@media (max-width: 804px) {
+    .footer__buttons .left a,
+    .footer__buttons .right a {
+        font-size: 12px;
+    }
 }
-@media (max-width: 804px){
-
-.footerButtons .left a, .footerButtons .right a{
-    font-size: 12px;
-}
-
-}
-@media (max-width: 425px){
-    
-    .footerButtons .left{
+@media (max-width: 425px) {
+    .footer__buttons .left {
         display: none;
     }
-    .footerButtons{
+    .footer__buttons {
         justify-content: center;
     }
-    
 }
-@media (max-width: 322px){
-
-.footerButtons .right a{
-    font-size: 12px;
-}
-
+@media (max-width: 322px) {
+    .footer__buttons .right a {
+        font-size: 12px;
+    }
 }

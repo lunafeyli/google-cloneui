@@ -7,44 +7,44 @@
     <title>Google UiClone</title>
     <link rel='shortcut icon' href='../../src/favicon.svg' type='image/x-icon'>
     <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href="../../globalstyle.css">
 </head>
 <body>
-    <input type="checkbox" value="darkModeSwitcher" id="darkModeSwitcher">
+    <input type="checkbox" value="darkModeSwitcher" id="switcher__dark">
     <div class="main">
         <div class="header">
-            <a href="index-dark.html" class="darkModeButton" hidden>
+            <a href="index-dark.html" class="" hidden>
                 <input type="button" value="Dark">
             </a>
-            <label for="darkModeSwitcher">
+            <label for="switcher__dark" class="header__dark-switcher">
                 <div class="switcher-bg"></div>
                 <div class="switcher-dot"></div>
             </label>
-            <div class="headerLinks">
+            <div class="header__links">
                 <a href="">Gmail</a>
-                <a href=""style="padding-left: 15px;">Imagens</a>
+                <a href="../img-search/index.html"style="padding-left: 15px;">Imagens</a>
             </div>
-            <div class="headerIcons">
-                <div class="avatar">
+            <div class="header__icons">
+                <div class="header__avatar">
                     <a href=#>
                         <img src="../../src/avatar.png" alt="Avatar" style="border-radius: 50%;">
                     </a>
                 </div>
-                <div class="googleApps">
+                <div class="header__g-apps">
                     <a href=#>
-                        <img src="../../src/google-app.svg " alt="Google Apps" class="googleApps-logo">
+                        <img src="../../src/google-app.svg " alt="Google Apps" class="g-app__logo">
                     </a>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="google" >
-                <img src="../../src/google-logo.svg" alt="Google Logo" class="googleLogo">
-                <div class="searchBar">
-                    <input type="text" height="44px" width="584px" class="iText" placeholder="Pesquise no Google ou digite um URL">
+            <div class="container__google" >
+                <img src="../../src/google-logo.svg" alt="Google Logo" class="google__logo">
+                <div class="google__sbar">
+                    <input type="text" height="44px" width="584px" class="sbar__input" placeholder="Pesquise no Google ou digite um URL">
                 </div>
-                <img src="../../src/search.svg" alt="search" class="searchIcon" hidden>
             </div>
-            <div class="botoes">
+            <div class="container__buttons">
                 <center>
                     <input type="button" value="Pesquisa Google">
                     <input type="button" value="Estou com sorte">
@@ -52,8 +52,8 @@
             </div>
         </div>
         <div class="footer">
-            <div class="footerLocal">Brasil</div>
-            <div class="footerButtons">
+            <div class="footer__local">Brasil</div>
+            <div class="footer__buttons">
                 <div class="left">
                     <a href="">Sobre</a>
                     <a href="">Publicidade</a>
@@ -69,7 +69,4 @@
         </div>
     </div>
 </body>
-    <script src=''>
-        
-    </script>
 </html>
