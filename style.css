@@ -28,6 +28,9 @@
   --header-text: #ffffffde;
   --header-icons: #ffffffde; }
 
+* {
+  box-sizing: border-box; }
+
 html,
 body {
   margin: 0;
@@ -40,9 +43,6 @@ body {
   justify-content: space-between;
   background-color: var(--bg-color); }
 
-* {
-  box-sizing: border-box; }
-
 a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -50,12 +50,6 @@ a {
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
-
-#switcher-dark {
-  cursor: pointer;
-  top: -7px;
-  position: absolute;
-  display: none; }
 
 header {
   padding: 12px 16px;
@@ -73,7 +67,12 @@ header {
     gap: 14px; }
   header .dark-switcher {
     height: 28px;
-    width: 28px; }
+    width: 28px;
+    padding: 0;
+    display: flex;
+    background: none;
+    border: none;
+    outline: none; }
     header .dark-switcher svg {
       position: absolute;
       height: 24px;
@@ -109,6 +108,8 @@ main {
   gap: 14px; }
   main .logo {
     height: 92px; }
+    main .logo.dark-on path {
+      fill: white; }
   main .search {
     display: flex;
     justify-content: center; }
@@ -146,16 +147,6 @@ main {
       main .buttons button:hover {
         box-shadow: 0px 1px 2px 1px var(--btn-shadow); }
 
-/*.google__sbar{
-	position: relative;
-	height: 44px;
-	width: 584px;
-}
-.searchIcon{
-	position: absolute;
-	height: 14px;
-	top: 0;
-}*/
 footer {
   background-color: var(--footer-color);
   height: 94px;
@@ -181,14 +172,6 @@ footer {
       padding: 15px;
       font-size: clamp(8px, 14px, 14px); }
 
-/* .darkmodeButton input{
-	position: fixed;
-	left: 10px;
-	top: 21.5px;
-	background-color: #f8f9fa;
-	border-color: #ffffff00;
-	color: #3c4043;
-} */
 @media (max-width: 804px) {
   footer a {
     font-size: 12px; } }
